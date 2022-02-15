@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colorbox.css">
 
     
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <style>
         body{min-width:1200px}
         .topNavWrap a{color:white}
@@ -94,9 +96,18 @@
 
         .contentWrap>ul>li:nth-child(1) .next{right: 0;}
         .contentWrap>ul>li:nth-child(1) .prev{left: 0;}
-        .contentWrap>ul>li:nth-child(1) .contentbanner{
+        .contentWrap>ul>li:nth-child(1) .contentbanner1{
             position: absolute;top:52%;;
-            cursor: pointer;left: 14%}
+            cursor: pointer;left: 7%}
+        .contentWrap>ul>li:nth-child(1) .contentbanner2{
+            position: absolute;top:53%;;
+            cursor: pointer;left: 9%}
+        .contentWrap>ul>li:nth-child(1) .contentbanner3{
+            position: absolute;top:54%;;
+            cursor: pointer;left: 10%}
+        .contentWrap>ul>li:nth-child(1) .contentbanner4{
+            position: absolute;top:64%;;
+            cursor: pointer;left: 10%}
         
 
         /* logo & logomenu */
@@ -116,25 +127,34 @@
                 position: absolute;left: 50%;transform: translateX(-50%);width: 230px;;}
         .cardboby h3{margin-top: 80px;} 
         .cardboby h3 span{font-size: 36px;color: white;} 
-        .cardboby h3 .span2{font-style: lighter;} 
+        .cardboby h3 .span2{font-weight: normal;} 
         .cardboby h3 .span3{font-style: oblique;} 
         .cardboby p{margin-top: 27px;margin-bottom:36px;font-size: 16px;color: white;}
         .cardboby a{border: 1px solid white;padding: 12px 42px;background-color: #ABA3BF;font-size: 14px;font-style: bold;color: white;;}
-
+    
         /* banner */
         .banner li h2{margin: 28px 0 0 18px;color: white;}
-        
         .banner li .banner_boby{margin: 26px 0 0 37px;}
         .banner li .banner_boby ul{width: 226px}
-        .news{margin: 20px;color: #fff}  
-        .news ul h2{;margin-bottom: 23px;margin-top: 7px} 
+        .banner li .banner_boby ul li{float: left;width: 33.3%;}
+        .banner li .banner_boby ul li h3{color: white;text-align: center;font-size: 13px;}
+        .banner li .banner_boby ul li img{margin-left: 12px;margin-bottom: 9px;}
+        
+
+     
+
+        /* news  */
+        .news{padding: 20px}
+        .news h2{margin-bottom: 17px;color: white;}
         .wall{
-            height: 2px;background: #ffffff;margin-bottom: 14px}
-        .slider{height: 100%;}
-        .news ul li{float: left;width: 50%;font-style: lighter;}
-        .news ul .newsone{float: left;width: 70%}
-        .news ul .newstwo{float: left;width: 30%}    
-        .news ul li h5{margin: 9px 0 9px 0;}
+            height: 2px;background: #ffffff;margin-bottom: 16px}
+        .news_clearfix {color: white;width: 100%;}    
+        .newsone_clearfix{float:left;display: block;text-align: center;line-height: center;}
+        .newsone_clearfix h5{float:left;text-align: center;line-height: center}
+        .newsone_clearfix p{font-size: 13px;float:left;;;text-align: center;line-height: center;}
+        .newsone_clearfix .newsspan {font-size: 14px;float:right;display: block;text-align: center;line-height: center;}
+        .newsone{bg}
+        .news div li {}
 
         /* sns */
         .sns{margin: 20px;}
@@ -144,7 +164,24 @@
         .sns .snsclearfix li h5{}
         .sns .snstwoclearfix{}
         .sns .snstwoclearfix ul{float: right;margin-left: 123px;}
+
+        .tour{background-image: url(images/frame14.png);
+                background-repeat: no-repeat;position: absolute}
+        .tour a{position: absolute;bottom: 0px;border: 1px solid none;opacity: 85%;;padding: 13px 102.5px;background-color: #1D1917;font-size: 19px;font-style: bold;color: white;}}
+         
+        .bg{position: absolute;}
+        .barWrap_one{width: 50px;height: 50px;
+            position: absolute;
+            left:50%;top:50%;
+            transform:translate(-50%,-50%) rotate(0) ;
+            border-top: 25px solid transparent;
+            border-left: 50px solid rgb(255, 255, 255);opacity: 80%;
+            border-bottom: 25px solid transparent;
+            display: flex;justify-content: center;
+            align-items: center;}
+
     </style>
+
     <script>
         $(document).ready(function(){
             var myslider1 = $(".slider").bxSlider({
@@ -156,6 +193,11 @@
             });
             $(".prev").click(function(){
                 myslider1.goToPrevSlide()
+            });
+            $(".youtube").colorbox({
+                iframe:true,
+                innerWidth:1000,
+                innerHeight:562.5
             });
         });
     </script>
@@ -209,8 +251,7 @@
             </div>
             <div class="secBannerWrap">
                 <ul>
-                    <li>test</li>
-                    <li>test</li>
+                    <li><a href="#"><img src="" alt=""></a></li>
                     <li>test</li>
                     <li>test</li>
                 </ul>
@@ -221,10 +262,30 @@
                 <li>
                     <!-- size 900*450 -->
                    <ul class="slider">
-                       <li><img src="images/getImage.png" alt=""></li>
-                       <li><img src="images/getImage (1).png" alt=""></li>
-                       <li><img src="images/getImage (2).png" alt=""></li>
-                       <li><img src="images/getImage (3).png" alt=""></li>
+                       <li>
+                           <img src="images/getImage.png" alt="">
+                           <div class="contentbanner1">
+                            <a href="#"><img src="images/Group 8.png" alt=""></a>
+                           </div>
+                        </li>
+                       <li>
+                           <img src="images/getImage (1).png" alt="">
+                            <div class="contentbanner2">
+                            <a href="#"><img src="images/Group 8.png" alt=""></a>
+                           </div>
+                        </li>
+                       <li>
+                           <img src="images/getImage (2).png" alt="">
+                           <div class="contentbanner3">
+                            <a href="#"><img src="images/Group 8.png" alt=""></a>
+                           </div>
+                        </li>
+                       <li>
+                           <img src="images/getImage (3).png" alt="">
+                           <div class="contentbanner4">
+                            <a href="#"><img src="images/Group 8.png" alt=""></a>
+                           </div>
+                        </li>
                    </ul>
                    <div class="prev">
                        <img src="images/arrow01.png" alt="">
@@ -233,70 +294,64 @@
                         <img src="images/arrow02.png" alt="">
                    </div>
 
-                   <div class="contentbanner">
-                    <a href=""><img src="images/Group 8.png" alt=""></a>
-                   </div>
+                 
 
                 </li>
                 <li class="cardWrap">
                     <div class="cardboby">
-                        <h3><span>APP<span class="span2">으로</span> 스마트 도서관 <span class="span2">바로이용하자</span><span class="span3">!</span></span>
+                        <h3><span>APP<span class="span2">으로</span> 스마트 도서관 <span class="span2">바로이용하자</span><span class="span3">!</span></span></h3>
                         <p>모바일 열람증은<br>
                             도서관 자료실 / 도서대출 등에
-                            사용할 수 있습니다. </p></h3><a href="#" class="cardicon">자세히보기</a>
+                            사용할 수 있습니다. </p><a href="#" class="cardicon">자세히보기</a>
                            
                     </div>
                 </li>
                  <li>
                     <div class="banner">
-                       <ul class="clearfix">
-                           <li>
-                            <h2>HOT LINK</h2>   
-                                <div class="banner_boby">
-                                    <ul class="clearfix">
-                                        <li class="ban1">
-                                            <img src="images/link icon1.png" alt="">
-                                            <h3>국제교류<p>센터</p></h3> 
-                                        </li>
-                                        <li class="ban2">  
-                                            <img src="images/link icon2.png" alt="">
-                                            <h3>원격지원<p>시스템</p></h3> 
-                                        </li>
-                                        <li class="ban3">  
-                                            <img src="images/link icon3.png" alt="">
-                                            <h3>예산/결산<p>공고</p></h3> 
-                                        </li>
-                                             
-                                            
-                                        
-                                    </ul>
-                                </div>
-                           </li>
-                        </ul>
-                    </div>
-                </li>
+                        <ul class="clearfix">
+                            <li>
+                             <h2>HOT LINK</h2>   
+                                 <div class="banner_boby">
+                                     <ul class="clearfix">
+                                         <li class="ban1">
+                                             <img src="images/link icon1.png" alt="">
+                                             <h3>국제교류<p>센터</p></h3> 
+                                         </li>
+                                         <li class="ban2">  
+                                             <img src="images/link icon2.png" alt="">
+                                             <h3>원격지원<p>시스템</p></h3> 
+                                         </li>
+                                         <li class="ban3">  
+                                             <img src="images/link icon3.png" alt="">
+                                             <h3>예산/결산<p>공고</p></h3> 
+                                         </li>
+ 
+ 
+ 
+                                     </ul>
+                                 </div>
+                            </li>
+                         </ul>
+                     </div>
+                 </li>
                 <li>
                     <div class="news">
-                        <ul>
+                       <div>
                             <h2>공지사항</h2>
                             <div class="wall"></div>
-                            <ul class="newsclearfix">
-                            <li class="newsone">
-                                <h5>[공지] 한국대학교 웹진...</h5>
-                                <h5>[보도] 우수대학교 선정 수상</h5>
-                                <h5>[공지] 대학입시 설명회</h5>
-                                <h5>[공지] 2016년 1학기 성적...</h5>
-                            </li>
-                            </ul>
-                            
-                            <li class="newstwo">
-                                <h5>2016-06-12</h5>
-                                <h5>2016-06-17</h5>
-                                <h5>2016-06-05</h5>
-                                <h5>2016-05-14</h5>
-                               
-                            </li>
-                        </ul>
+                            <ul class="news_clearfix">
+                                   <li class="newsone_clearfix">
+                                       <h5>[공지] 한국대학교 웹진...</h5>
+                                       <p>[보도] 우수대학교 선정 수상<br>
+                                               [공지] 대학입시 설명회<br>
+                                               [공지] 2016년 1학기 성적...</p>
+                                            <span class="newsspan">2016-06-12<br>
+                                                  2016-06-17<br>
+                                                  2016-06-05<br>
+                                                  2016-05-14</span>
+                                    </li>
+                                </ul>
+                          </div>
                     </div>
                 </li>
                 <li>
@@ -313,17 +368,28 @@
                             </ul>
                      <div class="snstwoclearfix">
                            <ul>
-                               <a href=""><img src="images/이미지 7.png" alt=""></a>
-                               <a href=""><img src="images/이미지 8.png" alt=""></a>
-                               <a href=""><img src="images/이미지 9.png" alt=""></a>
-                               <a href=""><img src="images/이미지 5.png" alt=""></a>
+                               <a href="#"><img src="images/i7.png" alt=""></a>
+                               <a href="#"><img src="images/i8.png" alt=""></a>
+                               <a href="#"><img src="images/i9.png" alt=""></a>
+                               <a href="#"><img src="images/i5.png" alt=""></a>
                            </ul>
                        
                     </div>
                     </div>
                 </li>
-                <li>6</li>
-                <li>7</li>
+                <li class="tour">
+                    <div>
+                         <a href="#" class="">자세히보기</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                         <a href="https://www.youtube.com/embed/_YDxM3pxBqI" class="youtube"><img src="images/Frame 16.png" alt=""></a>
+                    </div>
+                    <div class="bg"></div>
+                    <div class="barWrap"></div>
+                    <div class="barWrap_one"></div>
+                </li>
                 <li>8</li>
             </ul>
         </div>
