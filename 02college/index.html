@@ -170,16 +170,21 @@
         .tour a{position: absolute;bottom: 0px;border: 1px solid none;opacity: 85%;;padding: 13px 102.5px;background-color: #1D1917;font-size: 19px;font-style: bold;color: white;}}
          
         .bg{position: absolute;}
-        .barWrap_one{width: 50px;height: 50px;
+        .barWrap{width: 62px;height: 60px;background: #1D1917;opacity: 80%;
+            border-radius: 50%;
             position: absolute;
             left:50%;top:50%;
             transform:translate(-50%,-50%) rotate(0) ;
-            border-top: 25px solid transparent;
-            border-left: 50px solid rgb(255, 255, 255);opacity: 80%;
-            border-bottom: 25px solid transparent;
-            display: flex;justify-content: center;
-            align-items: center;}
+            cursor:pointer}
 
+        .barWrap:after{content: "";display: block;;;
+                       position: absolute;
+                       left:50%;top:50%;transform:translate(-50%,-50%) rotate(0); 
+                        border-top: 12px solid transparent;
+                        border-left: 20px solid rgb(255, 255, 255);
+                        border-bottom: 12px solid transparent;
+                        display: flex;justify-content: center;
+                        align-items: center; cursor:pointer;}
     </style>
 
     <script>
@@ -384,11 +389,14 @@
                 </li>
                 <li>
                     <div>
-                         <a href="https://www.youtube.com/embed/_YDxM3pxBqI" class="youtube"><img src="images/Frame 16.png" alt=""></a>
+                         <a href="https://www.youtube.com/embed/_YDxM3pxBqI" class="youtube">
+                             <img src="images/Frame 16.png" alt="">
+                             <div class="bg"></div>
+                             <div class="barWrap"></div>
+                        </a>
                     </div>
-                    <div class="bg"></div>
-                    <div class="barWrap"></div>
-                    <div class="barWrap_one"></div>
+                    
+                    
                 </li>
                 <li>8</li>
             </ul>
