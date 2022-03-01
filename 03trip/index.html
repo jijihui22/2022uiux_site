@@ -161,6 +161,11 @@
         }
         .bx-wrapper .bx-pager{bottom: 30px;}
 
+        .search_two .text{margin-top: 19px;margin-left: 23px;;}
+        .search_two h1{font-size: 56px;margin-bottom: 14px;}
+        .search_two p{font-size: 28px;margin-bottom: 10px;}
+        .search_two img{width: 277px;height: 320px;margin-left: 49px;}
+
         /* trip_one two */
         .trip_one .card{width: 196px;height: 20px;margin: 15px 17px 15px 20px;}
         .trip_one .card h3{font-size: 17px;display: flex;justify-content: space-between;}
@@ -175,49 +180,88 @@
                                 position: absolute;bottom: 4px;color: #ffffff;font-weight: bold;background-color: #5778BB;}
         
 
-        .search_two .text{margin-top: 19px;margin-left: 23px;;}
-        .search_two h1{font-size: 56px;margin-bottom: 14px;}
-        .search_two p{font-size: 28px;margin-bottom: 10px;}
-        .search_two img{width: 277px;height: 320px;margin-left: 49px;}
 
-        .trip_two{position: relative;width: 980px;;height: 240px;background-color: #222;}
-        .trip_two .wrap{width: 233px;height: 240px;}
-        .trip_two .wrap .nextBtn, .prevbtn{position: absolute;top: 50%;transform: translateY(-50%);}}
-        .trip_two .wrap .nextBtn{left: 0%;}
-        .trip_two .wrap .prevbtn{right:  0%;}
-        .trip_two .wrap li h3{width: 233px;height: 65px;background-color: #529351;
+
+        .trip_two{position: relative;width: 233px;;height: 240px;}
+        .trip_two .wrap{width: 233px;height: 240px;display: flex;}
+        .trip_two .wrap .wrap_one{width: 233px;height: 240px;}
+        .trip_two .wrap li{width: 233px;height: 240px;;} 
+        .trip_two .wrap .wrap_one .nextBtn, .prevbtn{position: absolute;top: 50%;transform: translateY(-50%);z-index: 1;cursor: pointer;}
+        .trip_two .wrap .wrap_one .nextBtn{left: 0%;}
+        .trip_two .wrap .wrap_one .prevbtn{right: 0%;}
+        .trip_two .wrap .wrap_one li h3{width: 233px;height: 65px;background-color: #529351;
                                 display: flex;justify-content: center;align-items: center;
                                 position: absolute;bottom: 0px;color: #ffffff;font-weight: bold}
+        .trip_two .wrap .wrap_two{margin-left: 16px;width: 233px;height: 240px}                            
+        .trip_two .wrap .wrap_two .nextBtn2, .prevBtn2{position: absolute;top: 50%;transform: translateY(-50%);}
+        .trip_two .wrap .wrap_two li h3{width: 233px;height: 65px;background-color: #152630;
+                                display: flex;justify-content: center;align-items: center;
+                                position: absolute;bottom: 0px;color: #ffffff;font-weight: bold}
+        .trip_two .wrap .wrap_two .prevBtn2{right: -107%;;}
 
+        .trip_two .wrap .wrap_three{margin-left: 16px;width: 233px;height: 240px;}
+        .trip_two .wrap .wrap_three .tex1 h3{position:absolute;top:5%;left:250%;color: #fff;font-size: 20px;}
+        .trip_two .wrap .wrap_three .tex1 div{width: 233px;height: 65px;
+            background: rgba(0,0,0,0.7) ;position: absolute;bottom: 0%;
+            color: #fff;;padding-left: 17px;padding-top:13px}
+
+        .trip_two .wrap .wrap_three .tex1 div h5{font-size: 16px;}
+        .trip_two .wrap .wrap_three .tex1 div p{font-size: 14px;}
+
+        .trip_two .wrap .wrap_four{margin-left: 16px;width: 233px;height: 240px;}
+        .trip_two .wrap .wrap_four .tex1{width: 233px;position: absolute;top:10%;color: #494748;font-size: 15px;
+                                        padding-left: 14px;padding-right: 0px;line-height: 21px;font-style: normal;font-weight: 500;}
+        .trip_two .wrap .wrap_four .tex1 h5{margin-top: 27px;;color: #43619D;font-size: 12px;font-style: normal;font-size: 12px;line-height: 14px;}
+        .trip_two .wrap .wrap_four .tex1 p{color: #E3A200;}
+        .trip_two .wrap .wrap_four .tex1 p span{color: #9A9899;}
+        .trip_two .wrap .wrap_four .tex2{position: absolute;width: 233px;bottom: 0%;height: 65px;background-color: #43619D;}
+        .trip_two .wrap .wrap_four .tex2 h5{padding-left: 17px;font-weight: 600;font-size: 16px;color: #FFFFFF;padding-top: 10px;}
 
         </style>
         <script>
         $(document).ready(function(){
-            var myslider1 = $(".slider").bxSlider({
+            var myslider = $(".slider").bxSlider({
                 // pager:false,
                 controls:false,
                 pagerCustom:".boxPager",
                 auto:true,
-                mode:"vertical" 
+                mode:"vertical" ,
+ 
             });
+            
+            $(".next").click(function(){
+                myslider.goToNextSlide();
+            })
+            $(".prev").click(function(){
+                myslider.goToNextSlide();
+            })
+
+
             var myslider2 = $(".slider2").bxSlider({
+                controls:false,
+                pagerCustom:".boxPager",
+                auto:true,
+            }); 
+
+            $(".next").click(function(){
+                myslider2.goToNextSlide();
+            })
+            $(".prev").click(function(){
+                myslider2.goToNextSlide();
+            })
+            
+            var myslider3 = $(".slider3").bxSlider({
                 controls:false,
                 pagerCustom:".boxPager",
                 auto:true,
             });
             $(".next").click(function(){
-                myslider1.goToNextSlide();
+                myslider3.goToNextSlide();
             })
             $(".prev").click(function(){
-                myslider1.goToNextSlide();
+                myslider3.goToNextSlide();
             })
-              
-            $(".next").click(function(){
-                myslider2.goToNextSlide();
-            })
-            $(".prev").click(function(){
-                myslider2.goToNextSlide();
-            })
+
         });
 
     </script>
@@ -267,7 +311,7 @@
                                         <fieldset>
                                             <legend>여행일정</legend>
                                             <div class="field">
-                                                <label for="go">1가고싶은 나라를 선택하세요</label>
+                                                <label for="go">가고싶은 나라를 선택하세요</label>
                                                 <select name="goSelect" id="go" class="inp-field">
                                                     <option value="">선택하세요</option>
                                                     <option value="제주도">제주도</option>
@@ -325,7 +369,7 @@
                                         <fieldset>
                                             <legend>여행일정</legend>
                                             <div class="field">
-                                                <label for="go">2가고싶은 나라를 선택하세요</label>
+                                                <label for="go">가고싶은 나라를 선택하세요</label>
                                                 <select name="goSelect" id="go" class="inp-field">
                                                     <option value="">선택하세요</option>
                                                     <option value="제주도">제주도</option>
@@ -383,7 +427,7 @@
                                         <fieldset>
                                             <legend>여행일정</legend>
                                             <div class="field">
-                                                <label for="go">2가고싶은 나라를 선택하세요</label>
+                                                <label for="go">가고싶은 나라를 선택하세요</label>
                                                 <select name="goSelect" id="go" class="inp-field">
                                                     <option value="">선택하세요</option>
                                                     <option value="제주도">제주도</option>
@@ -441,7 +485,7 @@
                                         <fieldset>
                                             <legend>여행일정</legend>
                                             <div class="field">
-                                                <label for="go">2가고싶은 나라를 선택하세요</label>
+                                                <label for="go">가고싶은 나라를 선택하세요</label>
                                                 <select name="goSelect" id="go" class="inp-field">
                                                     <option value="">선택하세요</option>
                                                     <option value="제주도">제주도</option>
@@ -491,12 +535,6 @@
                     </div>    
                 </li>
             </ul>
-            <div class="prev">
-                <img src="images/btn_left.png" alt="">
-            </div>
-            <div class="next">
-                <img src="images/btn_right.png" alt="">  
-            </div>
             <div class="sliderPager">
                 <div class="boxPager">
                     <a href="#" data-slide-index="0"><i class="fas fa-plane"></i> 공항예약</a>
@@ -533,26 +571,80 @@
                 </ul>
             </div>
         <div class="trip_two">
-            <div class="wrap">
-                <ul class="slider2">
-                    <li>
-                        <img src="images/trip3_01.png" alt="">
-                        <h3>HILLTON HOTEL (PARIS)</h3>
-                    </li>
-                    <li>
-                        <img src="images/trip3_02.png" alt="">
-                        <h3>Shangri-La Tanjung Aru</h3>
-                    </li>
-                </ul>
-                <div class="nextBtn ">
-                    <img src="images/arrow01.png" alt="">
-                </div>
-                <div class="prevbtn ">
-                    <img src="images/arrow02.png" alt="">
-                </div>
-            </div>
-        </div> 
+            <ul class="wrap">
+                <li class="wrap_one">
+                    <ul class="slider2">
+                        <li>
+                            <img src="images/trip3_01.png" alt="">
+                            <h3>HILLTON HOTEL (PARIS)</h3>
+                        </li>
+                        <li>
+                            <img src="images/trip3_02.png" alt="">
+                            <h3>Shangri-La Tanjung Aru</h3>
+                        </li>
+                    </ul>
+                    <div class="nextBtn">
+                        <img src="images/arrow01.png" alt="">
+                    </div>
+                    <div class="prevbtn">
+                        <img src="images/arrow02.png" alt="">
+                    </div>
+                </li>
+                <li class="wrap_two">
+                    <ul class="slider3">
+                        <li>
+                            <img src="images/trip4.png" alt="">
+                            <h3>관광명소 (디즈니랜드)</h3>
+                        </li>
+                        <li>
+                            <img src="images/trip4_02.png" alt="">
+                            <h3>Eiffel Tour (PARIS)</h3>
+                        </li>
+                    </ul>
+
+                    <div class="nextBtn2">
+                        <img src="images/arrow01.png" alt="">
+                    </div>
+                    <div class="prevBtn2">
+                        <img src="images/arrow02.png" alt="">
+                    </div>
+                </li>
+                <li class="wrap_three">
+                    <img src="images/trip4_03.png" alt="">
+                    <div class="tex1">
+                        <h3>TOKYO</h3>
+                        <div>
+                            <h5>20 ºC 구름조금</h5>
+                            <p>습도 60% 바람 남남동 2m/s</p>
+                        </div>>
+                    </div>
+                </li>
+                <li class="wrap_four">
+                    <img src="images/trip4_04.png" alt="">
+                    <div class="tex1">
+                        <h4>“해외여행은 처음이었는데,<br>
+                            하이미디어여행 덕분에 무사히
+                            다녀올 수 있었어요.”</h4>
+                        <h5>프랑스 파리 자유여행</h5>
+                        <p>
+                            ★★★<span>★★</span>
+                        </p>
+                    </div>
+                    <div class="tex2">
+                        <h5>facebook 여행후기<br>
+                            (임정희님)</h5>
+                   </div>
+                </li>
+            </ul>
+        </div>
+        <div class="three">
+            <ul>
+                <li>
+                    <img src="imag" alt="">
+                </li>
+            </ul>
         
+        </div>
     </div>
         <div class="search_two">
             <div class="text">
