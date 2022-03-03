@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
 
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -179,10 +180,7 @@
                                 display: flex;justify-content: center;align-items: center;
                                 position: absolute;bottom: 4px;color: #ffffff;font-weight: bold;background-color: #5778BB;}
         
-
-
-
-        .trip_two{position: relative;width: 233px;;height: 240px;}
+                                .trip_two{position: relative;width: 233px;;height: 240px;}
         .trip_two .wrap{width: 233px;height: 240px;display: flex;}
         .trip_two .wrap .wrap_one{width: 233px;height: 240px;}
         .trip_two .wrap li{width: 233px;height: 240px;;} 
@@ -210,12 +208,53 @@
 
         .trip_two .wrap .wrap_four{margin-left: 16px;width: 233px;height: 240px;}
         .trip_two .wrap .wrap_four .tex1{width: 233px;position: absolute;top:10%;color: #494748;font-size: 15px;
-                                        padding-left: 14px;padding-right: 0px;line-height: 21px;font-style: normal;font-weight: 500;}
-        .trip_two .wrap .wrap_four .tex1 h5{margin-top: 27px;;color: #43619D;font-size: 12px;font-style: normal;font-size: 12px;line-height: 14px;}
-        .trip_two .wrap .wrap_four .tex1 p{color: #E3A200;}
+                                        line-height: 21px;font-style: normal;font-weight: 500;}
+        .trip_two .wrap .wrap_four .tex1 h5{margin-left: 15px;margin-top: 85px;;color: #43619D;font-size: 12px;font-style: normal;font-size: 12px;line-height: 14px;}
+        .trip_two .wrap .wrap_four .tex1 p{color: #E3A200;margin-left: 15px}
         .trip_two .wrap .wrap_four .tex1 p span{color: #9A9899;}
         .trip_two .wrap .wrap_four .tex2{position: absolute;width: 233px;bottom: 0%;height: 65px;background-color: #43619D;}
         .trip_two .wrap .wrap_four .tex2 h5{padding-left: 17px;font-weight: 600;font-size: 16px;color: #FFFFFF;padding-top: 10px;}
+        
+        .trip_three{position: absolute;margin-top: 15px;}
+        .trip_three ul{display: block;display: flex;width: 233px;height: 240px;;}        
+        .trip_three ul li{display: block;display: flex;justify-content: center;align-items: center;}           
+        .trip_three ul li h3, h4{topwidth: 233px;height: 240px;;position: absolute
+                                ;display: flex;justify-content: center;}
+        .trip_three ul .one h3{top: 20px;font-size: 19px;color: #fff;}
+        .trip_three ul .one h4{top: 63px;font-size:14px;color: #fff;}
+        .trip_three ul li.one .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+                            background: rgba(139, 219, 223, 0.5);transition: 0.3s;}
+        .trip_three ul li .center{width: 32px;height: 32px;
+                                    position: absolute;top: 50%;
+                                    left: 50%;transform: translate(-50%,-50%);border-radius: 16px;;
+                                        border: #fff solid 4px;transition: 0.3s;}
+        .trip_three ul li .center div{width: 16px;height: 4px;background-color: #fff;
+                                position: absolute;top: 50%;
+                                    left: 50%;transform: translate(-50%,-50%)}
+        .trip_three ul li .center .stick2{transform: rotate(90deg);left: 15%;top: 10px;}                                         
+        .trip_three ul li:hover .bg{background: rgba(0, 0, 0, 0);}               
+        .trip_three ul .one:hover h3{color:rgb(12, 22, 54)}               
+        .trip_three ul .one:hover h4{color:rgb(23, 65, 202)}               
+        .trip_three ul li:hover .center{transform: translate(-50%,-50%) rotate(180deg);    }   
+        .trip_three ul li.two{position: relative;margin-left: 16px;}
+        .trip_three ul li.two .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+                            background: rgba(84, 82, 96, 0.5);transition: 0.3s;}
+        .trip_three ul .two h3{top: 139px;font-size:19px;color: #fff;}
+        .trip_three ul .two h4{top: 183px;font-size:14px;color: #fff;}
+        
+        .trip_three ul li.three{position: relative;margin-left: 16px;}
+        .trip_three ul li.three .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+                            background: rgba(127, 133, 129, 0.5);transition: 0.3s;}
+        .trip_three ul .three h3{top: 139px;font-size:19px;color: #fff;}
+        .trip_three ul .three h4{top: 183px;font-size:14px;color: #fff;}
+
+        .trip_three ul li.four{position: relative;margin-left: 16px;}
+        .trip_three ul li.four .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+                            background: rgba(104, 175, 145, 0.5);transition: 0.3s;}
+        .trip_three ul .four h3{top: 20px;font-size:19px;color: #fff;}
+        .trip_three ul .four h4{top: 63px;font-size:14px;color: #fff;}
+        .trip_three ul .four:hover h3{color:rgb(12, 22, 54)}               
+        .trip_three ul .four:hover h4{color:rgb(23, 65, 202)} 
 
         </style>
         <script>
@@ -623,7 +662,7 @@
                     <img src="images/trip4_04.png" alt="">
                     <div class="tex1">
                         <h4>“해외여행은 처음이었는데,<br>
-                            하이미디어여행 덕분에 무사히
+                            하이미디어여행 덕분에 무사히<br>
                             다녀올 수 있었어요.”</h4>
                         <h5>프랑스 파리 자유여행</h5>
                         <p>
@@ -637,10 +676,51 @@
                 </li>
             </ul>
         </div>
-        <div class="three">
+        <div class="trip_three">
             <ul>
-                <li>
-                    <img src="imag" alt="">
+                <li class="one">
+                    <img src="images/trip5_01.png" alt="">
+                    <div class="bg"></div>
+                    <h3><i class="fas fa-anchor" style="font-size:39px"></i>여행정보</h3>
+                    <h4>다양한 나라의 명소와 맛집 등<br>
+                        상세한 정보를 볼수 있습니다</h4>
+                    <div class="center">
+                        <div class="stick1"></div>
+                        <div class="stick2"></div>
+                    </div>
+                </li>
+                <li class="two">
+                    <img src="images/trip5_02.png" alt="">
+                    <div class="bg"></div>
+                    <h3><i class="fas fa-utensils" style="font-size:39px;margin-right: 7px;"></i>맛집정보</h3>
+                    <h4>다양한 나라의 명소와 맛집 등<br>
+                        상세한 정보를 볼수 있습니다</h4>
+                    <div class="center">
+                        <div class="stick1"></div>
+                        <div class="stick2"></div>
+                    </div>
+                </li>
+                <li class="three">
+                    <img src="images/trip5_03.png" alt="">
+                    <div class="bg"></div>
+                    <h3><i class="fas fa-hotel" style="font-size:39px;margin-right: 4px"></i>숙박정보</h3>
+                    <h4>다양한 나라의 명소와 맛집 등<br>
+                        상세한 정보를 볼수 있습니다</h4>
+                    <div class="center">
+                        <div class="stick1"></div>
+                        <div class="stick2"></div>
+                    </div>
+                </li>
+                <li class="four">
+                    <img src="images/trip5_04.png" alt="">
+                    <div class="bg"></div>
+                    <h3><i class="far fa-thumbs-up" style="font-size:39px;margin-right: 2px"></i>여행자후기</h3>
+                    <h4>다양한 나라의 명소와 맛집 등<br>
+                        상세한 정보를 볼수 있습니다</h4>
+                    <div class="center">
+                        <div class="stick1"></div>
+                        <div class="stick2"></div>
+                    </div>
                 </li>
             </ul>
         
