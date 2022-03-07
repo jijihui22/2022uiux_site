@@ -15,23 +15,10 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <style>
-        body{
-            background-image: url(images/bg02.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 89px;
-            
+        body{position: relative}
+              
 
-            }
-        
-        
-        /* header  */
-        .wrap{position: relative;z-index: 1;
-            ;}
+
         .wrap form{display: flex;}
         .wrap label{
             display: block;width: 54px;height: 17px;
@@ -65,53 +52,54 @@
             background-color: #fff;
             text-indent: -9999px;
             cursor: pointer;}
-        
-        header{background-color: #ffffff;height: 89px;width: 100%;}
-        .top{width: 980px;height: 89px;margin: 0 auto;display: flex;align-items: center;justify-content: space-between;}
-        .top .wrap{margin-left: 108px}
-        .top .call{font-size: 18px;}
-        .top .snsicon{display: flex;margin-left: -24px;}
-        .top .snsicon li{margin-left: 8px;}
-        .top .snsicon li a img{width: 24px;height: 24px;}
-        
 
+
+
+            /* header  */
+
+            header{height: 89+59px;width: 100%;margin: 0 auto}
+            .top{width: 980px;height: 89px;;margin: 0 auto;display: flex;align-items: center;justify-content: space-between;}
+            .top .wrap{margin-left: 108px}
+            .top .call{font-size: 18px;}
+            .top .snsicon{display: flex;margin-left: -24px;}
+            .top .snsicon li{margin-left: 8px;}
+            .top .snsicon li a img{width: 24px;height: 24px;}
+            
+            .wrap{position: relative;z-index: 1;}        
+            
         /* menu  */
         .menu{width: 100%;margin: 0 auto;
               background-color: #ffc72c;
-              border-bottom: 6px solid #fff;
-            }
-        .nav_menu{width: 980px;margin: 0 auto;height: 58px;display: flex;justify-content: center;align-items: center;}
+              border-bottom: 6px solid #fff;height: 65px;}
+        .nav_menu{width: 980px;margin: 0 auto;display: flex;justify-content: center;align-items: center;}
         .nav_menu li{display: flex;width: 25%;height: 58px;justify-content: center;align-items: center;border-left: 1px solid #EAEAEA;}
         .nav_menu li a{display: flex;justify-content: center;font-weight: 600;}
-        .nav_menu li{
-            }
         .nav_menu li:last-child{
-            border-right: 1px solid #faf7f7;
-        }
+            border-right: 1px solid #faf7f7;}
 
         /* slider  */
-        .searchwrap{width: 980px;position: absolute;top: 215px;}
-        .searchwrap .search_one{width: 482px;height: 567px;float: left}
-        .searchwrap .search_two{width: 482px;height: 567px;float: right;}
-        .searchwrap .search_one .prev{left: 0;cursor: pointer;;position: absolute;top:50%;transform: translateY(-50%)} 
-        .searchwrap .search_one .next{right: 0;position: absolute;top:50%;transform: translateY(-50%);cursor: pointer;}
-        .searchwrap .search_one {position: relative;}
-        .searchwrap .formWrap_one{margin: 0 auto;width: 482px;height: 300px;}
-        .searchwrap .formWrap_one .formWrap{float: right;width: 351px;height: 300px;}
-        .searchwrap .sliderwrap .sliderwrap_one{padding-left: 37px;padding-top: 20px}
-        .searchwrap .sliderPager{background-color: #fff;width: 132px;height: 300px;float: left;position: absolute;top: 0;}
-        .sliderPager .boxPager a{display: block;width: 132px;height: 75px;background-color: #0099CB;
+        .body_bgi{width: 100%;height: 1199px;background-image: url(images/bg02.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center}
+        .contenswrap{width: 980px;height: 611px;padding-top: 55px;padding-bottom: 11px;margin: 0 auto;}
+        .contenswrap .contens_one{width: 482px;height: 567px;float: left;position: relative;}
+        .contenswrap .search_two{width: 482px;height: 567px;float: right;}
+        /* .contenswrap .contens_one .prev{left: 0;cursor: pointer;;position: absolute;top:50%;transform: translateY(-50%)} 
+        .contenswrap .contens_one .next{right: 0;position: absolute;top:50%;transform: translateY(-50%);cursor: pointer;} */
+        .contenswrap .formWrap_one{margin: 0 auto;width: 482px;height: 300px;}
+        .contenswrap .formWrap_one .formWrap{float: right;width: 351px;height: 300px;}
+        .contenswrap .sliderwrap .sliderwrap_one{padding-left: 37px;padding-top: 20px}
+        .contenswrap .sliderPager{background-color: #fff;width: 132px;height: 300px;float: left;position: absolute;top: 0;}
+        .contenswrap .sliderPager .boxPager a{display: block;width: 132px;height: 75px;background-color: #0099CB;
                                 color: #404040;font-weight: bold;color:#404040;display: flex;align-items: center;justify-content: center;}
-        .sliderPager .boxPager a:hover{background-color: #fff}
-        .sliderPager .boxPager a.active{background-color: #fff;}
-        .sliderPager .boxPager a>i{margin-right: 10px;color: #73cae4;}
-
-        .searchwrap .formWrap_one{margin-bottom: 16px}
-
+        .contenswrap .sliderPager .boxPager a:hover{background-color: #fff}
+        .contenswrap .sliderPager .boxPager a.active{background-color: #fff;}
+        .contenswrap .sliderPager .boxPager a>i{margin-right: 10px;color: #73cae4;}
         fieldset{border: 0 none;}
         legend{position: absolute;left: 0;top: -9999px;}
         .field label{display: block;margin-bottom: 10px;font-size: 14px;font-weight: bold;}
-        .formWrap_one{width: 350px;height: 300px;margin: 28px 37px 23px 37px};
+        .formWrap_one{width: 350px;height: 300px;margin: 28px 37px 23px 37px}
         .wrapper{width: 351px;}
         .field{margin-bottom: 10px;}
         .formWrap form{width: 280px;height: 280px;}
@@ -168,22 +156,21 @@
         .search_two img{width: 277px;height: 320px;margin-left: 49px;}
 
         /* trip_one two */
+        .trip_one{width: 482px;height: 240px;margin-top: 14px}
+        .trip_one .one{float: left;width: 233px;height: 240px;position: relative;cursor: pointer;}
+        .trip_one .one .cardwrap{width: 233px;height: 50px;background-color: #EF8E25;
+                                display: flex;justify-content: center;align-items: center;
+                                position: absolute;bottom: 0px;color: #ffffff;font-weight: bold;}
         .trip_one .card{width: 196px;height: 20px;margin: 15px 17px 15px 20px;}
         .trip_one .card h3{font-size: 17px;display: flex;justify-content: space-between;}
         .trip_one .card h3 span{font-size: 17px;display: flex;justify-content: space-between;}
-        .trip_one .one{float: left;margin-top: 14px;position: relative;cursor: pointer;}
-        .trip_one .one .cardwrap{width: 233px;height: 50px;background-color: #EF8E25;
-                                display: flex;justify-content: center;align-items: center;
-                                position: absolute;bottom: 4px;color: #ffffff;font-weight: bold;}
-        .trip_one .two{float: right;margin-top: 14px;position: relative;cursor: pointer;}
+        .trip_one .two{float: right;position: relative;cursor: pointer;}
         .trip_one .two .cardwrap{width: 233px;height: 50px;
                                 display: flex;justify-content: center;align-items: center;
                                 position: absolute;bottom: 4px;color: #ffffff;font-weight: bold;background-color: #5778BB;}
-        
-                                .trip_two{position: relative;width: 233px;;height: 240px;}
+        .trip_two{width: 980px;height: 240px;margin: 0 auto;position: relative;}
         .trip_two .wrap{width: 233px;height: 240px;display: flex;}
-        .trip_two .wrap .wrap_one{width: 233px;height: 240px;}
-        .trip_two .wrap li{width: 233px;height: 240px;;} 
+        .trip_two .wrap li{width: 233px;height: 240px;} 
         .trip_two .wrap .wrap_one .nextBtn, .prevbtn{position: absolute;top: 50%;transform: translateY(-50%);z-index: 1;cursor: pointer;}
         .trip_two .wrap .wrap_one .nextBtn{left: 0%;}
         .trip_two .wrap .wrap_one .prevbtn{right: 0%;}
@@ -205,25 +192,31 @@
 
         .trip_two .wrap .wrap_three .tex1 div h5{font-size: 16px;}
         .trip_two .wrap .wrap_three .tex1 div p{font-size: 14px;}
+        .trip_two .wrap .wrap_three .bg{position: absolute;width: 100%;height: 100%;
+                                    left:498px;bottom:-233px;
+                                    display: flex;justify-content: center;align-items: center;
+                                    background: rgba(0,0,0,0.26);
+                                    transition: 0.3s;
+                                    font-weight: bold;color:white;text-align: center;font-size: 20px;
+                                    cursor: pointer;}
+        .trip_two .wrap .wrap_three:hover .bg{bottom:0}
 
         .trip_two .wrap .wrap_four{margin-left: 16px;width: 233px;height: 240px;}
         .trip_two .wrap .wrap_four .tex1{width: 233px;position: absolute;top:10%;color: #494748;font-size: 15px;
-                                        line-height: 21px;font-style: normal;font-weight: 500;}
+                                        line-height: 21px;font-style: normal;font-weight: 500;margin-left: 15px;}
         .trip_two .wrap .wrap_four .tex1 h5{margin-left: 15px;margin-top: 85px;;color: #43619D;font-size: 12px;font-style: normal;font-size: 12px;line-height: 14px;}
         .trip_two .wrap .wrap_four .tex1 p{color: #E3A200;margin-left: 15px}
         .trip_two .wrap .wrap_four .tex1 p span{color: #9A9899;}
         .trip_two .wrap .wrap_four .tex2{position: absolute;width: 233px;bottom: 0%;height: 65px;background-color: #43619D;}
         .trip_two .wrap .wrap_four .tex2 h5{padding-left: 17px;font-weight: 600;font-size: 16px;color: #FFFFFF;padding-top: 10px;}
         
-        .trip_three{position: absolute;margin-top: 15px;}
-        .trip_three ul{display: block;display: flex;width: 233px;height: 240px;;}        
-        .trip_three ul li{display: block;display: flex;justify-content: center;align-items: center;}           
-        .trip_three ul li h3, h4{topwidth: 233px;height: 240px;;position: absolute
-                                ;display: flex;justify-content: center;}
-        .trip_three ul .one h3{top: 20px;font-size: 19px;color: #fff;}
-        .trip_three ul .one h4{top: 63px;font-size:14px;color: #fff;}
-        .trip_three ul li.one .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
-                            background: rgba(139, 219, 223, 0.5);transition: 0.3s;}
+        .trip_three{position: relative;margin-top: 15px;display: block;z-index: 1;;width: 980px;height: 240px;margin: 0 auto;}
+        .trip_three ul{display: block;display: flex;width: 980px;height: 240px;;position: relative;margin-top: 23px;}        
+        .trip_three ul li{display: block;display: flex;justify-content: center;
+                          align-items: center;position: relative;}        
+        .trip_three ul li img{transform: scale(1);transition: 0.3s;box-shadow: 0 0 0 rgba(0,0,0,0)}  
+        .trip_three ul li:hover img{transform: scale(0.97);transition: 0.3s;box-shadow: 6px 6px 6px rgba(0,0,0,0.2)}  
+        .trip_three ul li .bg{transition: 0.3s}                                       
         .trip_three ul li .center{width: 32px;height: 32px;
                                     position: absolute;top: 50%;
                                     left: 50%;transform: translate(-50%,-50%);border-radius: 16px;;
@@ -233,28 +226,48 @@
                                     left: 50%;transform: translate(-50%,-50%)}
         .trip_three ul li .center .stick2{transform: rotate(90deg);left: 15%;top: 10px;}                                         
         .trip_three ul li:hover .bg{background: rgba(0, 0, 0, 0);}               
-        .trip_three ul .one:hover h3{color:rgb(12, 22, 54)}               
-        .trip_three ul .one:hover h4{color:rgb(23, 65, 202)}               
+        .trip_three ul li:hover h3{color:rgb(12, 22, 54)}               
+        .trip_three ul li:hover h4{color:rgb(23, 65, 202)}               
         .trip_three ul li:hover .center{transform: translate(-50%,-50%) rotate(180deg);    }   
-        .trip_three ul li.two{position: relative;margin-left: 16px;}
-        .trip_three ul li.two .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+        .trip_three ul li h3, h4{height: 240px;;position: absolute
+            ;display: flex;justify-content: center;}
+        .trip_three ul .one h3{top: 20px;font-size: 19px;color: #fff;}
+        .trip_three ul .one h4{top: 63px;font-size:14px;color: #fff;}
+        .trip_three ul .one .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+                            background: rgba(139, 219, 223, 0.5);;}
+        .trip_three ul .two:hover .bg{background: rgba(0, 0, 0, 0);}               
+        .trip_three ul .two{position: relative;margin-left: 16px;}
+        .trip_three ul .two .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
                             background: rgba(84, 82, 96, 0.5);transition: 0.3s;}
         .trip_three ul .two h3{top: 139px;font-size:19px;color: #fff;}
         .trip_three ul .two h4{top: 183px;font-size:14px;color: #fff;}
-        
-        .trip_three ul li.three{position: relative;margin-left: 16px;}
-        .trip_three ul li.three .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
-                            background: rgba(127, 133, 129, 0.5);transition: 0.3s;}
+        .trip_three ul .three:hover .bg{background: rgba(0, 0, 0, 0);}               
+        .trip_three ul .three{position: relative;margin-left: 16px;}
+        .trip_three ul .three .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+            background: rgba(127, 133, 129, 0.5);transition: 0.3s;}                 
         .trip_three ul .three h3{top: 139px;font-size:19px;color: #fff;}
         .trip_three ul .three h4{top: 183px;font-size:14px;color: #fff;}
-
-        .trip_three ul li.four{position: relative;margin-left: 16px;}
-        .trip_three ul li.four .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+        .trip_three ul .four:hover .bg{background: rgba(0, 0, 0, 0);}               
+        .trip_three ul .four{position: relative;margin-left: 16px;}
+        .trip_three ul .four .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;
                             background: rgba(104, 175, 145, 0.5);transition: 0.3s;}
         .trip_three ul .four h3{top: 20px;font-size:19px;color: #fff;}
         .trip_three ul .four h4{top: 63px;font-size:14px;color: #fff;}
-        .trip_three ul .four:hover h3{color:rgb(12, 22, 54)}               
-        .trip_three ul .four:hover h4{color:rgb(23, 65, 202)} 
+
+  
+        .footermenuwrap{width: 100%;background-color: #333}
+        .footermenuwrap .footermenu{width: 980px;margin: 0 auto}
+        .footermenuwrap .footermenu a{}
+        .footermenuwrap .footermenu a img{}
+
+        .footermenuwrap .footermenu address{}
+        .footermenuwrap .footermenu .text_one{}
+        .footermenuwrap .footermenu .text_two{}
+        .footermenuwrap .footermenu .text_three{}
+
+
+
+
 
         </style>
         <script>
@@ -336,279 +349,284 @@
                 <li><a href="#">프리미엄</a></li>
             </ul>
         </div>
-    </header>
-       
-    <div class="searchwrap clearfix">
-        <div class="search_one">
-            <ul class="slider">
-                <li>
-                    <div class="formWrap_one">
-                        <div class="formWrap">
-                            <div class="sliderwrap">
-                                <div class="sliderwrap_one">
-                                    <form action="#">
-                                        <fieldset>
-                                            <legend>여행일정</legend>
-                                            <div class="field">
-                                                <label for="go">가고싶은 나라를 선택하세요</label>
-                                                <select name="goSelect" id="go" class="inp-field">
-                                                    <option value="">선택하세요</option>
-                                                    <option value="제주도">제주도</option>
-                                                    <option value="베이징">베이징</option>
-                                                    <option value="도코">도코</option>
-                                                    <option value="하와이">하와이</option>
-                                                </select>
-                                            </div>
-                                            <div class="field day">
-                                                <div class="left">
-                                                    <label for="start">출발일</label>
-                                                    <input type="date" name="start" id="start" class="inp-field">
-                                                </div>
-                                                <div class="right">
-                                                    <label for="end">도착일</label>
-                                                    <input type="date" name="end" id="end" class="inp-field">
-                                                </div>
-                                            </div>
-                                            <div class="field grade">
-                                                <div class="left">
-                                                    <label for="sgrade">좌석등급</label>
-                                                    <select name="grade" id="sgrade" class="inp-field">
-                                                        <option value="">선택</option>
-                                                        <option value="일반석">일반석</option>
-                                                        <option value="비지니스">비지니스</option>
-                                                    </select>
-                                                </div>
-                                                <div class="right">
-                                                    <div class="adult">
-                                                        <label for="age1">성인</label>
-                                                        <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
+    </header> 
+    <div class="body_bgi">
+        <div class="contenswrap clearfix">
+            <div class="contens_one">
+                <div class="contens">
+                    <ul class="slider">
+                        <li>
+                            <div class="formWrap_one">
+                                <div class="formWrap">
+                                    <div class="sliderwrap">
+                                        <div class="sliderwrap_one">
+                                            <form action="#">
+                                                <fieldset>
+                                                    <legend>여행일정</legend>
+                                                    <div class="field">
+                                                        <label for="go">가고싶은 나라를 선택하세요</label>
+                                                        <select name="goSelect" id="go" class="inp-field">
+                                                            <option value="">선택하세요</option>
+                                                            <option value="제주도">제주도</option>
+                                                            <option value="베이징">베이징</option>
+                                                            <option value="도코">도코</option>
+                                                            <option value="하와이">하와이</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="childe">
-                                                        <label for="age2">아이</label>
-                                                        <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
+                                                    <div class="field day">
+                                                        <div class="left">
+                                                            <label for="start">출발일</label>
+                                                            <input type="date" name="start" id="start" class="inp-field">
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="end">도착일</label>
+                                                            <input type="date" name="end" id="end" class="inp-field">
+                                                        </div>
                                                     </div>
+                                                    <div class="field grade">
+                                                        <div class="left">
+                                                            <label for="sgrade">좌석등급</label>
+                                                            <select name="grade" id="sgrade" class="inp-field">
+                                                                <option value="">선택</option>
+                                                                <option value="일반석">일반석</option>
+                                                                <option value="비지니스">비지니스</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="adult">
+                                                                <label for="age1">성인</label>
+                                                                <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
+                                                            </div>
+                                                            <div class="childe">
+                                                                <label for="age2">아이</label>
+                                                                <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <input type="submit" class="inp-field btn">
+                                            </form>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formWrap_one">
+                                <div class="formWrap">
+                                    <div class="sliderwrap">
+                                        <div class="sliderwrap_one">
+                                            <form action="#">
+                                                <fieldset>
+                                                    <legend>여행일정</legend>
+                                                    <div class="field">
+                                                        <label for="go">가고싶은 나라를 선택하세요</label>
+                                                        <select name="goSelect" id="go" class="inp-field">
+                                                            <option value="">선택하세요</option>
+                                                            <option value="제주도">제주도</option>
+                                                            <option value="베이징">베이징</option>
+                                                            <option value="도코">도코</option>
+                                                            <option value="하와이">하와이</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="field day">
+                                                        <div class="left">
+                                                            <label for="start">출발일</label>
+                                                            <input type="date" name="start" id="start" class="inp-field">
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="end">도착일</label>
+                                                            <input type="date" name="end" id="end" class="inp-field">
+                                                        </div>
+                                                    </div>
+                                                    <div class="field grade">
+                                                        <div class="left">
+                                                            <label for="sgrade">좌석등급</label>
+                                                            <select name="grade" id="sgrade" class="inp-field">
+                                                                <option value="">선택</option>
+                                                                <option value="일반석">일반석</option>
+                                                                <option value="비지니스">비지니스</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="adult">
+                                                                <label for="age1">성인</label>
+                                                                <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
+                                                            </div>
+                                                            <div class="childe">
+                                                                <label for="age2">아이</label>
+                                                                <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <input type="submit" class="inp-field btn">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formWrap_one">
+                                <div class="formWrap">
+                                    <div class="sliderwrap">
+                                        <div class="sliderwrap_one">
+                                            <form action="#">
+                                                <fieldset>
+                                                    <legend>여행일정</legend>
+                                                    <div class="field">
+                                                        <label for="go">가고싶은 나라를 선택하세요</label>
+                                                        <select name="goSelect" id="go" class="inp-field">
+                                                            <option value="">선택하세요</option>
+                                                            <option value="제주도">제주도</option>
+                                                            <option value="베이징">베이징</option>
+                                                            <option value="도코">도코</option>
+                                                            <option value="하와이">하와이</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="field day">
+                                                        <div class="left">
+                                                            <label for="start">출발일</label>
+                                                            <input type="date" name="start" id="start" class="inp-field">
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="end">도착일</label>
+                                                            <input type="date" name="end" id="end" class="inp-field">
+                                                        </div>
+                                                    </div>
+                                                    <div class="field grade">
+                                                        <div class="left">
+                                                            <label for="sgrade">좌석등급</label>
+                                                            <select name="grade" id="sgrade" class="inp-field">
+                                                                <option value="">선택</option>
+                                                                <option value="일반석">일반석</option>
+                                                                <option value="비지니스">비지니스</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="adult">
+                                                                <label for="age1">성인</label>
+                                                                <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
+                                                            </div>
+                                                            <div class="childe">
+                                                                <label for="age2">아이</label>
+                                                                <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <input type="submit" class="inp-field btn">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="formWrap_one">
+                                <div class="formWrap">
+                                    <div class="sliderwrap">
+                                        <div class="sliderwrap_one">
+                                            <form action="#">
+                                                <fieldset>
+                                                    <legend>여행일정</legend>
+                                                    <div class="field">
+                                                        <label for="go">가고싶은 나라를 선택하세요</label>
+                                                        <select name="goSelect" id="go" class="inp-field">
+                                                            <option value="">선택하세요</option>
+                                                            <option value="제주도">제주도</option>
+                                                            <option value="베이징">베이징</option>
+                                                            <option value="도코">도코</option>
+                                                            <option value="하와이">하와이</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="field day">
+                                                        <div class="left">
+                                                            <label for="start">출발일</label>
+                                                            <input type="date" name="start" id="start" class="inp-field">
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="end">도착일</label>
+                                                            <input type="date" name="end" id="end" class="inp-field">
+                                                        </div>
+                                                    </div>
+                                                    <div class="field grade">
+                                                        <div class="left">
+                                                            <label for="sgrade">좌석등급</label>
+                                                            <select name="grade" id="sgrade" class="inp-field">
+                                                                <option value="">선택</option>
+                                                                <option value="일반석">일반석</option>
+                                                                <option value="비지니스">비지니스</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="adult">
+                                                                <label for="age1">성인</label>
+                                                                <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
+                                                            </div>
+                                                            <div class="childe">
+                                                                <label for="age2">아이</label>
+                                                                <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <input type="submit" class="inp-field btn">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 
-                
-                                </fieldset>
-                                <input type="submit" class="inp-field btn">
-                            </form>
-                        </div>
+                    <div class="sliderPager">
+                        <div class="boxPager">
+                            <a href="#" data-slide-index="0"><i class="fas fa-plane"></i> 공항예약</a>
+                            <a href="#" data-slide-index="1"><i class="fas fa-mouse"></i> 호텔예약</a>
+                            <a href="#" data-slide-index="2"><i class="fas fa-car-alt"></i> 렌트카</a>
+                            <a href="#" data-slide-index="3"><i class="fas fa-suitcase-rolling"></i> 휴양지</a>
                         </div>
                     </div>
-                    </div>    
-                </li>
-                <li>
-                    <div class="formWrap_one">
-                        <div class="formWrap">
-                            <div class="sliderwrap">
-                                <div class="sliderwrap_one">
-                                    <form action="#">
-                                        <fieldset>
-                                            <legend>여행일정</legend>
-                                            <div class="field">
-                                                <label for="go">가고싶은 나라를 선택하세요</label>
-                                                <select name="goSelect" id="go" class="inp-field">
-                                                    <option value="">선택하세요</option>
-                                                    <option value="제주도">제주도</option>
-                                                    <option value="베이징">베이징</option>
-                                                    <option value="도코">도코</option>
-                                                    <option value="하와이">하와이</option>
-                                                </select>
-                                            </div>
-                                            <div class="field day">
-                                                <div class="left">
-                                                    <label for="start">출발일</label>
-                                                    <input type="date" name="start" id="start" class="inp-field">
-                                                </div>
-                                                <div class="right">
-                                                    <label for="end">도착일</label>
-                                                    <input type="date" name="end" id="end" class="inp-field">
-                                                </div>
-                                            </div>
-                                            <div class="field grade">
-                                                <div class="left">
-                                                    <label for="sgrade">좌석등급</label>
-                                                    <select name="grade" id="sgrade" class="inp-field">
-                                                        <option value="">선택</option>
-                                                        <option value="일반석">일반석</option>
-                                                        <option value="비지니스">비지니스</option>
-                                                    </select>
-                                                </div>
-                                                <div class="right">
-                                                    <div class="adult">
-                                                        <label for="age1">성인</label>
-                                                        <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
-                                                    </div>
-                                                    <div class="childe">
-                                                        <label for="age2">아이</label>
-                                                        <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
-                                                    </div>
-                                                </div>
-                                            </div>
-                        
-                        
-                                        </fieldset>
-                                        <input type="submit" class="inp-field btn">
-                                    </form>
+                </div>
+                <div class="trip_one">
+                    <ul class="clearfix">
+                        <li class="one">
+                            <img src="images/trip1_01.png" alt="">
+                            <div class="cardwrap">
+                                 <div class="card">
+                                    <h3>프랑스
+                                        <span>￦1,370,000~</span>
+                                        <span>></span>
+                                    </h3>
                                 </div>
                             </div>
-                        </div>
-                    </div>    
-                </li>
-                <li>
-                    <div class="formWrap_one">
-                        <div class="formWrap">
-                            <div class="sliderwrap">
-                                <div class="sliderwrap_one">
-                                    <form action="#">
-                                        <fieldset>
-                                            <legend>여행일정</legend>
-                                            <div class="field">
-                                                <label for="go">가고싶은 나라를 선택하세요</label>
-                                                <select name="goSelect" id="go" class="inp-field">
-                                                    <option value="">선택하세요</option>
-                                                    <option value="제주도">제주도</option>
-                                                    <option value="베이징">베이징</option>
-                                                    <option value="도코">도코</option>
-                                                    <option value="하와이">하와이</option>
-                                                </select>
-                                            </div>
-                                            <div class="field day">
-                                                <div class="left">
-                                                    <label for="start">출발일</label>
-                                                    <input type="date" name="start" id="start" class="inp-field">
-                                                </div>
-                                                <div class="right">
-                                                    <label for="end">도착일</label>
-                                                    <input type="date" name="end" id="end" class="inp-field">
-                                                </div>
-                                            </div>
-                                            <div class="field grade">
-                                                <div class="left">
-                                                    <label for="sgrade">좌석등급</label>
-                                                    <select name="grade" id="sgrade" class="inp-field">
-                                                        <option value="">선택</option>
-                                                        <option value="일반석">일반석</option>
-                                                        <option value="비지니스">비지니스</option>
-                                                    </select>
-                                                </div>
-                                                <div class="right">
-                                                    <div class="adult">
-                                                        <label for="age1">성인</label>
-                                                        <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
-                                                    </div>
-                                                    <div class="childe">
-                                                        <label for="age2">아이</label>
-                                                        <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
-                                                    </div>
-                                                </div>
-                                            </div>
-                        
-                        
-                                        </fieldset>
-                                        <input type="submit" class="inp-field btn">
-                                    </form>
+                        </li>
+                        <li class="two">
+                            <img src="images/trip1_02.png" alt="">
+                            <div class="cardwrap">
+                                <div class="card">
+                                    <h3>일본
+                                        <span>￦890,000~</span>
+                                        <span>></span>
+                                    </h3>
                                 </div>
                             </div>
-                        </div>
-                    </div>    
-                </li>
-                <li>
-                    <div class="formWrap_one">
-                        <div class="formWrap">
-                            <div class="sliderwrap">
-                                <div class="sliderwrap_one">
-                                    <form action="#">
-                                        <fieldset>
-                                            <legend>여행일정</legend>
-                                            <div class="field">
-                                                <label for="go">가고싶은 나라를 선택하세요</label>
-                                                <select name="goSelect" id="go" class="inp-field">
-                                                    <option value="">선택하세요</option>
-                                                    <option value="제주도">제주도</option>
-                                                    <option value="베이징">베이징</option>
-                                                    <option value="도코">도코</option>
-                                                    <option value="하와이">하와이</option>
-                                                </select>
-                                            </div>
-                                            <div class="field day">
-                                                <div class="left">
-                                                    <label for="start">출발일</label>
-                                                    <input type="date" name="start" id="start" class="inp-field">
-                                                </div>
-                                                <div class="right">
-                                                    <label for="end">도착일</label>
-                                                    <input type="date" name="end" id="end" class="inp-field">
-                                                </div>
-                                            </div>
-                                            <div class="field grade">
-                                                <div class="left">
-                                                    <label for="sgrade">좌석등급</label>
-                                                    <select name="grade" id="sgrade" class="inp-field">
-                                                        <option value="">선택</option>
-                                                        <option value="일반석">일반석</option>
-                                                        <option value="비지니스">비지니스</option>
-                                                    </select>
-                                                </div>
-                                                <div class="right">
-                                                    <div class="adult">
-                                                        <label for="age1">성인</label>
-                                                        <input type="number" name="age1" id="age1" class="inp-field" placeholder="1">
-                                                    </div>
-                                                    <div class="childe">
-                                                        <label for="age2">아이</label>
-                                                        <input type="number" name="age2" id="age2" class="inp-field" placeholder="1">
-                                                    </div>
-                                                </div>
-                                            </div>
-                        
-                        
-                                        </fieldset>
-                                        <input type="submit" class="inp-field btn">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-                </li>
-            </ul>
-            <div class="sliderPager">
-                <div class="boxPager">
-                    <a href="#" data-slide-index="0"><i class="fas fa-plane"></i> 공항예약</a>
-                    <a href="#" data-slide-index="1"><i class="fas fa-mouse"></i> 호텔예약</a>
-                    <a href="#" data-slide-index="2"><i class="fas fa-car-alt"></i> 렌트카</a>
-                    <a href="#" data-slide-index="3"><i class="fas fa-suitcase-rolling"></i> 휴양지</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="trip_one clearfix">
-                <ul>
-                    <li class="one">
-                        <img src="images/trip1_01.png" alt="">
-                        <div class="cardwrap">
-                             <div class="card">
-                                <h3>프랑스 
-                                    <span>￦1,370,000~</span>
-                                    <span>></span>
-                                </h3>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="two">
-                        <img src="images/trip1_02.png" alt="">
-                        <div class="cardwrap">
-                            <div class="card">
-                                <h3>일본 
-                                    <span>￦890,000~</span>
-                                    <span>></span>
-                                </h3>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="contens_two">
+                <div class="search_two">
+                    <div class="text">
+                        <h1>여행을 가볍게 !</h1>
+                        <p> Are you Ready?<br>지금 바로 떠나는 안전지대 여행!</p>
+                        <img src="images/content2.png" alt="">
+                     </div>
+                </div>
             </div>
+        </div>
         <div class="trip_two">
             <ul class="wrap">
                 <li class="wrap_one">
@@ -640,7 +658,6 @@
                             <h3>Eiffel Tour (PARIS)</h3>
                         </li>
                     </ul>
-
                     <div class="nextBtn2">
                         <img src="images/arrow01.png" alt="">
                     </div>
@@ -657,6 +674,9 @@
                             <p>습도 60% 바람 남남동 2m/s</p>
                         </div>>
                     </div>
+                    <div class="bg">
+                        <p>다른 나라 날씨 보기</p>
+                    </div>
                 </li>
                 <li class="wrap_four">
                     <img src="images/trip4_04.png" alt="">
@@ -672,7 +692,7 @@
                     <div class="tex2">
                         <h5>facebook 여행후기<br>
                             (임정희님)</h5>
-                   </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -723,18 +743,44 @@
                     </div>
                 </li>
             </ul>
-        
         </div>
     </div>
-        <div class="search_two">
-            <div class="text">
-                <h1>여행을 가볍게 ! </h1>
-                <p> Are you Ready? <br>지금 바로 떠나는 안전지대 여행!</p>
-                <img src="images/content2.png" alt="">
-             </div>
+    <footer>
+        <div class="footermenuwrap">
+            <div class="footermenu">
+                <!-- <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">여행약관</a></li>
+                    <li><a href="#">여행자보험</a></li>
+                    <li><a href="#">대리점안내</a></li>
+                    <li><a href="#">신문광고</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                </ul> -->
+                <div>
+                    <a href="#">(주)노랑풍선</a>
+                    <a href="#"><img src="images/logo_kosdaq 1.png" alt=""></a>
+                    <address>대표이사 고재경, 최명일 | 서울특별시 중구 수표로 31, 노랑풍선빌딩<br>
+                        사업자등록번호 104-81-64440 | 관광사업자등 록증번호 제2006-000003호<br>
+                        통신판매업신고번호 제2008-서울중구-0278 사업자 정보확인</address>
+                    <p class="text_one">
+                        대표번호 1544-2288 | 이메일 master@ybtour.com<br>
+                        영업배상책임보험가입 총 20억원, 한국관광협회중앙회 여행공제회 공제영업보증가입 10억원, 공제기획여행보증가입 5억원
+                    </p>
+                    <p class="text_two">
+                        · 노랑풍선은 개별 항공권, 단품 및 일부 여행상품에 대하여 판매중개자로서 통신판매의 당사자가 아닙니다. 따라서 해당 상품의 상품·거래정보 및 거래 등에
+                        대하여 책임을 지지 않습니다.
+                        · 항공권 또는 항공권이 포함된 상품의 경우, 표시되는 상품요금은 세금 및 예상 유류할증료가 포함된 가격이며, 유류할증료는 유가 및 환율 등에 따라
+                        변동될 수 있습니다.
+                    </p>
+                    <p class="text_three">
+                        ©Yellow Balloon tour. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
         </div>
-        
-    </div>
+    </footer>
 
 </body>
 </html>
